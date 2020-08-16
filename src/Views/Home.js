@@ -1,6 +1,4 @@
-import React, { useState,useEffect } from 'react'
-import HelloWorld from '../Components/HelloWorld'
-import axios from 'axios'
+import React from 'react'
 import Loader from '../Components/Loader'
 import ProductCard from '../Components/ProductCard'
 import { useAxiosGet } from '../Hooks/HttpRequests'
@@ -25,8 +23,8 @@ function Home() {
 
     if (products.data) {
         content = 
-            products.data.map((product, key) =>
-                <div>
+            products.data.map((product) =>
+                <div key={product.id}>
                     <ProductCard product={product} />
                 </div>
                 
