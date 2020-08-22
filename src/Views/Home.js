@@ -7,7 +7,7 @@ function Home() {
 
     let content = null
 
-    const url = 'http://5f0d1f5911b7f6001605665c.mockapi.io/v1/products?page=1&limit=10'
+    const url = 'https://5f0d1f5911b7f6001605665c.mockapi.io/v1/products?page=1&limit=10'
     
     let products = useAxiosGet(url)
     
